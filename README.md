@@ -8,3 +8,7 @@ android 增量更新，梳理下增量更新的基本逻辑。
 1. 考虑到合并操作的耗时，应使用子线程加后台service加Notification进行。
 2. 各个环节失败，错误的提示和下一步操作。
 
+## 例子
+例子中是用的是CMake,关键的bzip2中的代码使用的是另一个项目的，基本上用的都是一样的，然后提供一个window下的bsdiff工具在win文件夹。
+先本地生成old.apk,new.apk，然后用工具生成差异包，adb push 到本地目录，安装old.apk，然后点击patch，就可以了。
+
