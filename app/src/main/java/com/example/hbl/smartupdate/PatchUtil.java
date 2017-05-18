@@ -5,5 +5,8 @@ package com.example.hbl.smartupdate;
  */
 
 public class PatchUtil {
+    static {
+        System.loadLibrary("PatchUtil");
+    }
     public static native int patch(String old,String neew,String patch);
 }
